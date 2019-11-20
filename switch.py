@@ -13,8 +13,6 @@ class Switch:
 
     To run the game, create a Switch object and call its run_game method:
 
-    >>> game = Switch()
-    >>> game.run_game()
 
     Switch objects have the following attributes, which are initialized
     by Switch_setup_round:
@@ -269,4 +267,5 @@ class Switch:
         p1.hand, p2.hand = p2.hand, p1.hand
         UI.print_message('{} swaps hands with {}.'.format(p1.name, p2.name))
 
-
+game = Switch()
+game.run_game()
