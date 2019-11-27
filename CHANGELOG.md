@@ -6,3 +6,5 @@
 
 * v1.1.0 [2019-10-25]: First major release.
   This version is known to contain some bugs.
+  
+  Moved "game = Switch()" and "game.run_game()" to outside of the class.
