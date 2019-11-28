@@ -101,17 +101,17 @@ class Switch:
         # apply any pending penalties (skip, draw2, draw4)
         if self.skip:
             # return without performing any discard
-            self.skip == False
+            self.skip = False
             UI.print_message('{} is skipped.'.format(player.name))
         elif self.draw2:
             # draw two cards
             picked = self.pick_up_card(player, 2)
-            self.draw2 == False
+            self.draw2 = False
             UI.print_message('{} draws {} cards.'.format(player.name, picked))
         elif self.draw4:
             # draw four cards
             picked = self.pick_up_card(player, 4)
-            self.draw4 == False
+            self.draw4 = False
             UI.print_message('{} draws {} cards.'.format(player.name, picked))
 
         top_card = self.discards[-1]
@@ -270,3 +270,4 @@ class Switch:
 if __name__ == "__main__":
     game = Switch()
     game.run_game()
+

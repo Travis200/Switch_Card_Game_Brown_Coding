@@ -16,6 +16,10 @@
   
   Corrected error in line 178 of switch.py ```if card.value in 'QA':``` &rarr; ```if card.value in 'Q' or 'A':```
   
+  Corrected error in lines 104, 109, 114 in switch.py (in respective order):  
+  ```self.skip == False``` &rarr; ```self.skip = False```  
+  ```self.draw2 == False``` &rarr; ```self.draw2 = False```  
+  ```self.draw4 == False``` &rarr; ```self.draw4 = False```
   
   
   
