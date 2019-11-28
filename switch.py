@@ -267,5 +267,6 @@ class Switch:
         p1.hand, p2.hand = p2.hand, p1.hand
         UI.print_message('{} swaps hands with {}.'.format(p1.name, p2.name))
 
-game = Switch()
-game.run_game()
+if __name__ == "__main__":
+    game = Switch()
+    game.run_game()
