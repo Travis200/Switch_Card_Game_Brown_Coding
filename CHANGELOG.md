@@ -8,3 +8,9 @@
   This version is known to contain some bugs.
   
   Moved "game = Switch()" and "game.run_game()" to outside of the class.
+  
+  Corrected error in line 157 of switch.py: ```for i in: range(1, n):``` --> ```for i in: range(1, n+1):```
+  
+  
+  
+  
