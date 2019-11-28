@@ -23,11 +23,11 @@
   
   Corrected error in line 226 of switch.py ```elif card.value == '4':``` &rarr; ```elif card.value == 4:```
   
-  Corrected error in line 257 of switch.py```sizes = sizes[:idx] + sizes[idx:]``` &rarr; 
+  Corrected error in line 257 of switch.py ```sizes = sizes[:idx] + sizes[idx:]``` &rarr; 
   ```sizes = sizes[idx:] + sizes[:idx]```
   
-  
-  
+  Corrected error in line 50 of players.py ```sorted_choices = sorted(choices, key=score, reverse=True```   
+  &rarr; ```sorted_choices = sorted(choices, key=score, reverse=True)```
   
  
  
