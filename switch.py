@@ -175,7 +175,7 @@ class Switch:
     def can_discard(self, card):
         """Return whether card can be discarded onto discard pile."""
         # queens and aces can always be discarded
-        if card.value in 'QA':
+        if card.value in 'Q' or 'A':
             return True
         # otherwise either suit or value has to match with top card
         else:
