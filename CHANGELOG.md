@@ -23,6 +23,10 @@
   
   Corrected error in line 226 of switch.py ```elif card.value == '4':``` &rarr; ```elif card.value == 4:```
   
+  Corrected error in line 257 of switch.py```sizes = sizes[:idx] + sizes[idx:]``` &rarr; 
+  ```sizes = sizes[idx:] + sizes[:idx]```
+  
+  
   
   
  
