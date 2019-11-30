@@ -21,7 +21,7 @@
   ```self.draw2 == False``` &rarr; ```self.draw2 = False```  
   ```self.draw4 == False``` &rarr; ```self.draw4 = False```
   
-  Corrected error in line 226 of switch.py ```elif card.value == '4':``` &rarr; ```elif card.value == 4:```
+  Corrected error in line 226 of switch.py ```elif card.value == '4':``` &rarr; ```elif card.value == '2':```
   
   Corrected error in line 257 of switch.py ```sizes = sizes[:idx] + sizes[idx:]``` &rarr; 
   ```sizes = sizes[idx:] + sizes[:idx]```
