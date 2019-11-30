@@ -11,7 +11,7 @@
   
   Corrected error in line 157 of switch.py: ```for i in: range(1, n):``` &rarr; ```for i in: range(1, n+1):```
   
-  Corrected error in line 6 of cards.py ```values = '2 3 4 5 6 7 8 9 10 J Q K A'.split()```   
+  Corrected error in line 6 of cards.py ```values = '2 3 4 5 6 7 8 9 10 J Q K A A'.split()```   
   &rarr;  ```values = '2 3 4 5 6 7 8 9 10 J Q K A'.split()```
   
   Corrected error in line 178 of switch.py ```if card.value in 'QA':``` &rarr; ```if card.value in 'Q' or 'A':```
@@ -28,6 +28,8 @@
   
   Corrected error in line 50 of players.py ```sorted_choices = sorted(choices, key=score, reverse=True```   
   &rarr; ```sorted_choices = sorted(choices, key=score, reverse=True)```
+  
+  
   
  
  
