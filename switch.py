@@ -103,6 +103,8 @@ class Switch:
             # return without performing any discard
             self.skip = False
             UI.print_message('{} is skipped.'.format(player.name))
+
+            return
         elif self.draw2:
             # draw two cards
             picked = self.pick_up_card(player, 2)
@@ -119,7 +121,10 @@ class Switch:
         UI.print_player_info(player, top_card, hand_sizes)
 
         # determine discardable cards
-        discardable = [card for card in player.hand if self.can_discard]
+        discardable = []
+        for i in player.hand:
+            if self.can_discard(i):
+                discardable.append(i)
 
         # have player select card
         hands = self.get_normalized_hand_sizes(player)
@@ -230,7 +235,7 @@ class Switch:
             self.draw4 = True
         # if card is a king, game direction reverses
         elif card.value == 'K':
-            self.direction *= 1
+            self.direction *= -1
             UI.print_message("Game direction reversed.")
         # if card is a jack, ask player with whom to swap hands
         elif card.value == 'J':

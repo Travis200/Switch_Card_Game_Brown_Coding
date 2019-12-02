@@ -29,8 +29,19 @@
   Corrected error in line 50 of players.py ```sorted_choices = sorted(choices, key=score, reverse=True```   
   &rarr; ```sorted_choices = sorted(choices, key=score, reverse=True)```
   
-  Corrected error in line 97 of test_switch.py ```    assert s.can_discard(Card('♠', 'K'))``` 
+  Corrected error in line 97 of test_switch.py ```assert s.can_discard(Card('♠', 'K'))``` 
   &rarr; ```assert s.can_discard(Card('♠', 'A'))```
+  
+  Corrected error in line 124 of switch .py ```discardable = [card for card in player.hand if self.can_discard]```  
+  &rarr;  
+  discardable = []  
+ for i in player.hand:  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if self.can_discard(i):  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; discardable.append(i)  
+  
+  Corrected error in line 238 of switch.py ```self.direction *= 1``` &rarr; ```self.direction *= -1```
+  
+  
   
   
   
