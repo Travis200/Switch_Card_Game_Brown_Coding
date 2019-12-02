@@ -1,6 +1,6 @@
 # CHANGELOG
 
-* v1.1.0 [2019-11-08]: Added a SmartAI computer opponent.
+* v1.1.0 [2019-11-08]: Added a SpipmartAI computer opponent.
   Added strategy players.SmartAI
   None of the bugs have been fixed.
 
@@ -28,6 +28,11 @@
   
   Corrected error in line 50 of players.py ```sorted_choices = sorted(choices, key=score, reverse=True```   
   &rarr; ```sorted_choices = sorted(choices, key=score, reverse=True)```
+  
+  Corrected error in line 97 of test_switch.py ```    assert s.can_discard(Card('♠', 'K'))``` 
+  &rarr; ```assert s.can_discard(Card('♠', 'A'))```
+  
+  
   
   
   
