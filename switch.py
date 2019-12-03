@@ -19,7 +19,7 @@ class Switch:
 
     self.players -- list of Player objects
     self.stock -- list of cards to draw from
-    self.discards -- list of disracded cards
+    self.discards -- list of discarded cards
     self.skip -- bool indicating that the next player is skipped
     self.draw2 -- bool indicating that the next player must draw 2 cards
     self.draw4 -- bool indicating that the next player must draw 4 cards
@@ -35,8 +35,8 @@ class Switch:
             if choice == 1:
                 # set up self.players before round starts
                 self.players = UI.get_player_information(MAX_PLAYERS)
-                self.run_round()
             else:
+                self.run_round()
                 break
         UI.say_goodbye()
 
@@ -123,6 +123,7 @@ class Switch:
         # determine discardable cards
         discardable = []
         for i in player.hand:
+            print(i)
             if self.can_discard(i):
                 discardable.append(i)
 
