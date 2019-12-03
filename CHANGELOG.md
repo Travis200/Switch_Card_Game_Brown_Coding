@@ -14,7 +14,8 @@
   Corrected error in line 6 of cards.py ```values = '2 3 4 5 6 7 8 9 10 J Q K A A'.split()```   
   &rarr;  ```values = '2 3 4 5 6 7 8 9 10 J Q K A'.split()```
   
-  Corrected error in line 178 of switch.py ```if card.value in 'QA':``` &rarr; ```if card.value in 'Q' or 'A':```
+  Corrected error in line 186 of switch.py ```if card.value in 'Q' or 'A':```
+  &rarr; ```if card.value in 'Q' or card.value in 'A':```
   
   Corrected errors in lines 104, 109, 114 in switch.py (in respective order):  
   ```self.skip == False``` &rarr; ```self.skip = False```  
@@ -41,7 +42,10 @@
   
   Corrected error in line 238 of switch.py ```self.direction *= 1``` &rarr; ```self.direction *= -1```
   
-  Corrected error im  lines 35-40 of switch.py
+  Corrected error im  lines 35-40 of switch.py 
+ 
+  
+  
 
 
   

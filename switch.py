@@ -52,13 +52,14 @@ class Switch:
 
         i = 0 # current player index
         while True:
-            # process current player's turn 
+            # process current player's turn
+            print("this is i",i)
             won = self.run_player(self.players[i])
             if won:
                 break
             else:
                 # advance player index depending on self.direction
-                i = i+self.direction % len(self.players)
+                i = (i+self.direction) % len(self.players)
         UI.print_winner_of_game(self.players[i])
 
     def setup_round(self):
@@ -123,9 +124,10 @@ class Switch:
         # determine discardable cards
         discardable = []
         for i in player.hand:
-            print(i)
+            print("T or F?",self.can_discard(i))
             if self.can_discard(i):
                 discardable.append(i)
+        print("discardable ->>> ",discardable)
 
         # have player select card
         hands = self.get_normalized_hand_sizes(player)
@@ -181,12 +183,13 @@ class Switch:
     def can_discard(self, card):
         """Return whether card can be discarded onto discard pile."""
         # queens and aces can always be discarded
-        if card.value in 'Q' or 'A':
+        if card.value in 'Q' or card.value in 'A':
+            print("returning truuue")
             return True
         # otherwise either suit or value has to match with top card
         else:
             top_card = self.discards[-1]
-            return card.suit == top_card.suit and card.value == top_card.value
+            return card.suit == top_card.suit or card.value == top_card.value
 
     def draw_and_discard(self, player):
         """Draw a card from stock and discard it if possible.

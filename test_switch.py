@@ -180,7 +180,7 @@ def test_run_player__adheres_to_draw2_flag():
 
 def test_run_player__adheres_to_draw4_flag():
     """run_player adheres to switch.draw4"""
-    s = mock_setup_round(['', ''], '♢5 ♣5 ♣6 ♣7 ♣8', '♢3', draw4=True)
+    s = mock_setup_round(['', ''], '♣9 ♣5 ♣6 ♣7 ♣8', '♢3', draw4=True)
     player = s.players[1]
     s.run_player(player)
     assert len(player.hand) == 4
