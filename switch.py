@@ -32,12 +32,12 @@ class Switch:
         while True:
             UI.print_game_menu()
             choice = UI.get_int_input(1, 2)
-            if choice == 1:
+            if choice == 2:
+                break
+            else:
                 # set up self.players before round starts
                 self.players = UI.get_player_information(MAX_PLAYERS)
-            else:
                 self.run_round()
-                break
         UI.say_goodbye()
 
     def run_round(self):

@@ -41,6 +41,9 @@
   
   Corrected error in line 238 of switch.py ```self.direction *= 1``` &rarr; ```self.direction *= -1```
   
+  Corrected error im  lines 35-40 of switch.py
+
+
   
   
   
