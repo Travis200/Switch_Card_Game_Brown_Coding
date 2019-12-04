@@ -53,7 +53,6 @@ class Switch:
         i = 0 # current player index
         while True:
             # process current player's turn
-            print("this is i",i)
             won = self.run_player(self.players[i])
             if won:
                 break
@@ -127,7 +126,6 @@ class Switch:
             print("T or F?",self.can_discard(i))
             if self.can_discard(i):
                 discardable.append(i)
-        print("discardable ->>> ",discardable)
 
         # have player select card
         hands = self.get_normalized_hand_sizes(player)
@@ -184,7 +182,6 @@ class Switch:
         """Return whether card can be discarded onto discard pile."""
         # queens and aces can always be discarded
         if card.value in 'Q' or card.value in 'A':
-            print("returning truuue")
             return True
         # otherwise either suit or value has to match with top card
         else:

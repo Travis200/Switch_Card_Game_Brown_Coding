@@ -44,8 +44,12 @@
   
   Corrected error im  lines 35-40 of switch.py 
  
- Corrected error in line 62 ```i = i+self.direction % len(self.players)``` &rarr;
+  Corrected error in line 62 ```i = i+self.direction % len(self.players)``` &rarr;
   ```i = (i+self.direction) % len(self.players)```
+  
+  
+  
+  
   
   
 
